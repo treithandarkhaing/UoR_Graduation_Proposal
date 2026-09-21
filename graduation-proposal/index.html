@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Graduation Ceremony Proposal | For Management Review</title>
+<meta name="description" content="A complete proposal for the upcoming graduation ceremony — venue selection, photographer, videographer, photo booth, graduation gowns, budget comparison and sample videos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* ============ Design tokens ============ */
+  :root {
+    --bg: #fafaf9;
+    --white: #ffffff;
+    --ink: rgb(15,51,96);
+    --ink-soft: rgb(55,76,106);
+    --muted: rgb(104,119,140);
+    --line: rgb(214,222,232);
+    --gold: rgb(179,161,36);
+    --gold-dark: rgb(139,123,24);
+    --gold-soft: rgb(250,248,232);
+    --gold-border: rgb(218,207,137);
+    --green: rgb(15,51,96);
+    --green-dark: rgb(15,51,96);
+    --green-soft: rgb(235,241,248);
+    --green-border: rgb(184,201,220);
+    --radius: 16px;
+    --shadow: 0 1px 3px rgba(28,25,23,.06), 0 1px 2px rgba(28,25,23,.04);
+    --shadow-lg: 0 10px 30px rgba(28,25,23,.12);
+    --serif: "Montserrat", Arial, sans-serif;
+    --sans: "Montserrat", Arial, sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.55;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  main { flex: 1; }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  ul { list-style: none; }
+
+  .wrap { max-width: 1152px; margin: 0 auto; padding: 0 20px; }
+  section { scroll-margin-top: 84px; }
+
+  /* ============ Header / Nav ============ */
+  .site-header {
+    position: sticky; top: 0; z-index: 60;
+    background: rgba(255,255,255,.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-bar {
+    display: flex; align-items: center; gap: 16px;
+    height: 64px;
+  }
+  .brand { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+  .brand-badge {
+    width: 38px; height: 38px; border-radius: 50%;
+    background: var(--ink); color: var(--gold);
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 19px;
+  }
+  .brand-name { font-family: var(--serif); font-weight: 700; font-size: 17px; line-height: 1.1; }
+  .brand-sub { display: block; font-family: var(--sans); font-size: 10px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+  .nav-links {
+    display: flex; gap: 4px; flex: 1; min-width: 0;
+    overflow-x: auto; scrollbar-width: none;
+  }
+  .nav-links::-webkit-scrollbar { display: none; }
+  .nav-links a {
+    white-space: nowrap; flex-shrink: 0;
+    font-size: 14px; color: var(--ink-soft);
+    padding: 7px 13px; border-radius: 999px;
+    transition: background .15s, color .15s;
+  }
+  .nav-links a:hover { background: #f5f5f4; color: var(--ink); }
+  .nav-links a.active { background: var(--gold); color: #fff; font-weight: 600; }
+  .print-btn {
+    flex-shrink: 0;
+    display: inline-flex; align-items: center; gap: 7px;
+    border: 1px solid #d6d3d1; background: #fff; color: var(--ink-soft);
+    font-size: 14px; font-weight: 500; font-family: var(--sans);
+    padding: 8px 15px; border-radius: 10px; cursor: pointer;
+    transition: background .15s, border-color .15s;
+  }
+  .print-btn:hover { background: var(--gold-soft); border-color: var(--gold); color: var(--gold-dark); }
+
+  /* ============ Hero ============ */
+  .hero { position: relative; color: #fff; }
+  .hero-img { width: 100%; height: 460px; object-fit: cover; }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom, rgba(28,25,23,.68), rgba(28,25,23,.42) 45%, rgba(28,25,23,.8));
+  }
+  .hero-content {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; padding: 0 20px;
+  }
+  .hero-tag {
+    display: inline-block; margin-bottom: 14px;
+    border: 1px solid rgba(179,161,36,.7); background: rgba(15,51,96,.72);
+    color: rgb(238,224,139); backdrop-filter: blur(4px);
+    font-size: 11.5px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase;
+    padding: 6px 16px; border-radius: 999px;
+  }
+  .hero h1 {
+    font-family: var(--serif); font-weight: 800;
+    font-size: clamp(34px, 6vw, 58px); line-height: 1.12;
+    text-shadow: 0 2px 12px rgba(0,0,0,.35);
+  }
+  .hero p { max-width: 620px; margin-top: 16px; font-size: 15.5px; color: #e7e5e4; }
+  .hero-actions { margin-top: 26px; display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+  .btn-gold {
+    display: inline-flex; align-items: center; height: 46px;
+    background: var(--gold); color: var(--ink);
+    font-weight: 700; font-size: 14.5px;
+    padding: 0 26px; border-radius: 999px;
+    box-shadow: 0 6px 18px rgba(0,0,0,.25);
+    transition: background .15s;
+  }
+  .btn-gold:hover { background: var(--gold-dark); color: #fff; }
+  .btn-ghost {
+    display: inline-flex; align-items: center; height: 46px;
+    border: 1px solid rgba(255,255,255,.4); background: rgba(255,255,255,.12);
+    color: #fff; backdrop-filter: blur(4px);
+    font-weight: 600; font-size: 14.5px;
+    padding: 0 26px; border-radius: 999px;
+    transition: background .15s;
+  }
+  .btn-ghost:hover { background: rgba(255,255,255,.22); }
+
+  .stats-strip { position: relative; z-index: 5; margin-top: -52px; }
+  .stats-card {
+    background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    padding: 22px;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
+  }
+  .stat {
+    display: flex; align-items: center; gap: 12px;
+    background: var(--bg); border-radius: 12px; padding: 14px;
+  }
+  .stat-ico {
+    width: 40px; height: 40px; flex-shrink: 0; border-radius: 50%;
+    background: var(--gold-soft); color: var(--gold-dark);
+    display: inline-flex; align-items: center; justify-content: center; font-size: 18px;
+  }
+  .stat-label { font-size: 10.5px; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); }
+  .stat-value { font-size: 14px; font-weight: 700; color: var(--ink); margin-top: 2px; }
+  .prepared-note { text-align: center; font-size: 12.5px; color: var(--muted); margin-top: 16px; }
+  .prepared-note strong { color: var(--ink-soft); font-weight: 600; }
+
+  /* ============ Sections ============ */
+  .section { padding: 56px 0; }
+  .section.tint { background: var(--bg); }
+  .section.white { background: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .section-head { margin-bottom: 36px; }
+  .section-num-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+  .section-num {
+    width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0;
+    background: var(--gold); color: #fff;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 13.5px; font-weight: 700;
+  }
+  .section-rule { height: 1px; flex: 1; background: linear-gradient(to right, rgba(179,161,36,.65), transparent); }
+  .section-head h2 { font-family: var(--serif); font-size: clamp(23px, 3vw, 29px); font-weight: 700; letter-spacing: -.01em; }
+  .section-head .sub { margin-top: 8px; color: var(--ink-soft); font-size: 14.5px; max-width: 720px; }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+
+  .card {
+    background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+    box-shadow: var(--shadow); overflow: hidden;
+    display: flex; flex-direction: column;
+    transition: box-shadow .2s;
+  }
+  .card:hover { box-shadow: var(--shadow-lg); }
+  .card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; padding: 20px 20px 12px; }
+  .card-head h3 { font-family: var(--serif); font-size: 20px; font-weight: 700; }
+  .card-head .tagline { font-size: 12.5px; color: var(--muted); margin-top: 3px; }
+  .badge-rec {
+    flex-shrink: 0; display: inline-flex; align-items: center; gap: 5px;
+    background: var(--green); color: #fff;
+    font-size: 12px; font-weight: 600;
+    padding: 4px 11px; border-radius: 999px;
+  }
+  .badge-alt {
+    flex-shrink: 0; display: inline-flex; align-items: center;
+    border: 1px solid #d6d3d1; color: var(--ink-soft);
+    font-size: 12px; font-weight: 500;
+    padding: 4px 11px; border-radius: 999px;
+  }
+  .card-body { padding: 0 20px 20px; display: flex; flex-direction: column; gap: 14px; flex: 1; }
+
+  .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .photo-grid button {
+    position: relative; border: 1px solid var(--line); border-radius: 10px;
+    overflow: hidden; padding: 0; cursor: zoom-in; background: #eee;
+    aspect-ratio: 4 / 3;
+  }
+  .photo-grid img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
+  .photo-grid button:hover img { transform: scale(1.05); }
+  .photo-grid button::after {
+    content: "⤢"; position: absolute; top: 7px; right: 7px;
+    width: 24px; height: 24px; border-radius: 50%;
+    background: rgba(28,25,23,.55); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; opacity: 0; transition: opacity .2s;
+  }
+  .photo-grid button:hover::after { opacity: 1; }
+
+  .fee-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .fee-box { background: var(--gold-soft); border-radius: 12px; padding: 12px 14px; }
+  .fee-box .fee-label {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 10.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--gold-dark);
+  }
+  .fee-box .fee-value { font-family: var(--serif); font-size: 19px; font-weight: 700; margin-top: 4px; }
+  .fee-box .fee-note { font-size: 11.5px; color: var(--muted); margin-top: 1px; }
+
+  .fact-list { display: flex; flex-direction: column; gap: 9px; font-size: 13.5px; color: var(--ink-soft); }
+  .fact-list .fact { display: flex; gap: 9px; align-items: flex-start; }
+  .fact-list .fact .ico { color: var(--gold); flex-shrink: 0; width: 16px; text-align: center; }
+  .fact-copy { min-width: 0; }
+  .fact-detail { display: block; margin-top: 3px; line-height: 1.55; }
+  .fact-list a.gold-link { color: var(--gold-dark); font-weight: 600; }
+  .fact-list a.gold-link:hover { text-decoration: underline; }
+
+  .panel { background: #fafaf9; border: 1px solid var(--line); border-radius: 12px; padding: 13px 15px; }
+  .panel-title {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 10.5px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--muted);
+    margin-bottom: 7px;
+  }
+  .dot-list { display: grid; grid-template-columns: 1fr 1fr; gap: 5px 14px; }
+  .dot-list li, .check-list li { font-size: 12.5px; color: var(--ink-soft); display: flex; gap: 7px; align-items: flex-start; }
+  .dot-list li::before { content: "•"; color: var(--gold); font-weight: 800; }
+  .check-list { display: grid; grid-template-columns: 1fr 1fr; gap: 5px 14px; }
+  .check-list li::before { content: "✓"; color: var(--green); font-weight: 800; }
+  .dots-1col { grid-template-columns: 1fr; }
+  .fb-btn {
+    margin-top: auto;
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    border: 1px solid #d6d3d1; border-radius: 999px;
+    padding: 9px 16px; font-size: 13.5px; font-weight: 600; color: var(--ink-soft);
+    transition: all .15s;
+  }
+  .fb-btn:hover { border-color: #1877F2; color: #1877F2; background: rgba(24,119,242,.06); }
+
+  /* Booth cards */
+  .booth-cover { position: relative; aspect-ratio: 16 / 8.4; overflow: hidden; }
+  .booth-cover img { width: 100%; height: 100%; object-fit: cover; }
+  .booth-cover .shade { position: absolute; inset: 0; background: linear-gradient(to top, rgba(28,25,23,.72), transparent 55%); }
+  .booth-cover .cover-row { position: absolute; left: 16px; right: 16px; bottom: 12px; display: flex; align-items: flex-end; justify-content: space-between; gap: 10px; }
+  .booth-cover h3 { font-family: var(--serif); font-size: 21px; color: #fff; text-shadow: 0 1px 8px rgba(0,0,0,.4); }
+  .price-pill {
+    background: rgba(255,255,255,.96); border-radius: 999px;
+    padding: 5px 13px; font-size: 13.5px; font-weight: 800; color: var(--ink);
+    display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
+  }
+  .price-pill .cur { color: var(--gold); }
+
+  /* Gown section */
+  .gown-grid { display: grid; grid-template-columns: 2fr 3fr; gap: 26px; align-items: stretch; }
+  .gown-photo { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); min-height: 320px; }
+  .gown-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .fee-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .fee-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 16px; }
+  .fee-card .fc-label { display: flex; align-items: center; gap: 9px; font-size: 11px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); }
+  .fc-ico { width: 32px; height: 32px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; }
+  .ico-gold { background: var(--gold-soft); color: var(--gold-dark); }
+  .ico-green { background: var(--green-soft); color: var(--green-dark); }
+  .ico-orange { background: #ffedd5; color: #c2410c; }
+  .ico-red { background: #fee2e2; color: #b91c1c; }
+  .fee-card .fc-value { font-family: var(--serif); font-size: 23px; font-weight: 700; margin-top: 10px; }
+  .fee-card .fc-unit { font-size: 11.5px; color: var(--muted); margin-left: 4px; }
+  .fee-card .fc-note { font-size: 12px; color: var(--muted); margin-top: 3px; }
+  .terms { margin-top: 14px; background: var(--gold-soft); border: 1px solid var(--gold-border); border-radius: var(--radius); padding: 15px 17px; }
+  .terms-title { display: flex; align-items: center; gap: 7px; font-size: 11.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 8px; }
+  .terms li { position: relative; padding-left: 15px; font-size: 12.5px; color: var(--ink-soft); margin-top: 6px; }
+  .terms li::before { content: "•"; position: absolute; left: 2px; color: var(--gold); font-weight: 800; }
+
+  /* ============ Budget ============ */
+  .summary-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 26px; }
+  .sum-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 20px; }
+  .sum-card .sc-label { display: flex; align-items: center; gap: 7px; font-size: 11px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); }
+  .sum-card .sc-value { font-family: var(--serif); font-size: 25px; font-weight: 700; margin-top: 8px; }
+  .sum-card .sc-note { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .sum-card.green { background: var(--green-soft); border-color: var(--green-border); }
+  .sum-card.green .sc-label { color: var(--green-dark); }
+  .sum-card.green .sc-value { color: #065f46; }
+  .sum-card.green .sc-note { color: var(--green-dark); }
+
+  .chart-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 22px; margin-bottom: 26px; }
+  .chart-card h3 { font-family: var(--serif); font-size: 18px; font-weight: 700; margin-bottom: 18px; }
+  .chart { display: flex; align-items: flex-end; gap: 8px 26px; height: 300px; padding: 0 6px; border-bottom: 2px solid var(--line); overflow-x: auto; }
+  .chart-group { flex: 1 1 0; min-width: 72px; height: 100%; display: flex; align-items: flex-end; justify-content: center; gap: 7px; }
+  .bar { width: 30px; border-radius: 7px 7px 0 0; animation: grow .8s ease-out both; }
+  .bar-a { background: var(--gold); }
+  .bar-b { background: var(--green); }
+  @keyframes grow { from { height: 0 !important; } }
+  .chart-labels { display: flex; gap: 8px 26px; padding: 8px 6px 0; }
+  .chart-label { flex: 1 1 0; min-width: 72px; text-align: center; font-size: 11px; color: var(--muted); }
+  .chart-legend { display: flex; justify-content: center; gap: 22px; margin-top: 16px; font-size: 12.5px; color: var(--ink-soft); }
+  .legend-dot { display: inline-block; width: 11px; height: 11px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+
+  .decision-summary { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 18px; }
+  .decision-box { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 18px 20px; }
+  .decision-box.recommended { background: var(--green-soft); border-color: var(--green-border); }
+  .decision-box .decision-label { display: block; padding: 0; color: var(--muted); font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+  .decision-box.recommended .decision-label { color: var(--green-dark); }
+  .decision-box h3 { font-family: var(--serif); font-size: 20px; margin-top: 5px; }
+  .decision-box p { color: var(--ink-soft); font-size: 12.5px; margin-top: 4px; }
+  .decision-box .decision-total { color: var(--gold-dark); font-size: 18px; font-weight: 800; margin-top: 10px; }
+  .decision-box.recommended .decision-total { color: var(--green-dark); }
+  .table-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+  .table-heading { padding: 18px 22px 14px; border-bottom: 1px solid var(--line); }
+  .table-heading h3 { font-family: var(--serif); font-size: 19px; }
+  .table-heading p { color: var(--muted); font-size: 12.5px; margin-top: 3px; }
+  .table-scroll { overflow-x: auto; }
+  table.budget { width: 100%; min-width: 560px; border-collapse: collapse; font-size: 13.5px; }
+  .budget thead th { background: #f5f5f4; text-align: left; padding: 13px 22px; font-weight: 700; color: var(--ink-soft); border-bottom: 1px solid var(--line); }
+  .budget thead th:last-child { color: var(--green-dark); }
+  .budget td { padding: 11px 22px; border-bottom: 1px solid #f5f5f4; color: var(--ink-soft); vertical-align: top; }
+  .budget th.num, .budget td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .budget td.num { text-align: left; }
+  .budget tbody tr:nth-child(even) { background: #fafaf9; }
+  .budget tr.total td { background: var(--gold-soft); font-weight: 800; color: var(--ink); border-top: 2px solid #d6d3d1; border-bottom: none; padding: 14px 22px; }
+  .budget tr.total td:last-child { color: var(--green-dark); }
+  .table-note { background: #fafaf9; border-top: 1px solid #f5f5f4; padding: 15px 22px; font-size: 12px; color: var(--muted); }
+  .table-note p + p { margin-top: 8px; }
+  .table-note .scenario-note { background: var(--gold-soft); border: 1px solid var(--gold-border); border-radius: 10px; color: var(--ink); padding: 10px 12px; }
+
+  /* ============ Videos ============ */
+  .video-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; transition: box-shadow .2s; }
+  .video-card:hover { box-shadow: var(--shadow-lg); }
+  .video-frame { position: relative; aspect-ratio: 16 / 9; background: #0c0a09; cursor: pointer; overflow: hidden; }
+  .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .video-frame video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .video-frame .yt-thumb { width: 100%; height: 100%; object-fit: cover; opacity: .92; transition: transform .3s, opacity .2s; }
+  .video-frame:hover .yt-thumb { transform: scale(1.04); opacity: 1; }
+  .video-frame .yt-play {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 62px; height: 44px; border-radius: 12px;
+    background: rgba(220,38,38,.94); color: #fff;
+    display: flex; align-items: center; justify-content: center; font-size: 18px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.4); transition: background .2s;
+  }
+  .video-frame:hover .yt-play { background: #dc2626; }
+  .video-frame:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+  .video-meta { padding: 16px 18px; }
+  .video-meta h3 { font-size: 14.5px; font-weight: 600; display: flex; gap: 8px; align-items: flex-start; }
+  .video-meta h3 .yt { color: #dc2626; flex-shrink: 0; }
+  .video-meta p { font-size: 12px; color: var(--muted); margin-top: 6px; }
+
+  /* ============ Footer ============ */
+  .site-footer { margin-top: auto; background: #1c1917; color: #d6d3d1; }
+  .footer-top { display: flex; justify-content: space-between; align-items: center; gap: 26px; padding: 34px 0 22px; flex-wrap: wrap; }
+  .footer-brand { display: flex; align-items: center; gap: 13px; }
+  .footer-badge { width: 42px; height: 42px; border-radius: 50%; background: rgba(179,161,36,.18); color: var(--gold); display: inline-flex; align-items: center; justify-content: center; font-size: 20px; }
+  .footer-brand .fb-title { font-family: var(--serif); font-weight: 700; color: #fff; font-size: 16.5px; }
+  .footer-brand .fb-sub { font-size: 12px; color: #a8a29e; }
+  .footer-contacts { display: flex; flex-direction: column; gap: 6px; font-size: 13.5px; }
+  .footer-contacts span .ico { color: var(--gold); margin-right: 8px; }
+  .footer-bottom { border-top: 1px solid rgba(168,162,158,.25); padding: 16px 0 22px; display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; font-size: 12px; color: #a8a29e; }
+
+  /* ============ Lightbox ============ */
+  .lightbox {
+    position: fixed; inset: 0; z-index: 100;
+    background: rgba(12,10,9,.82); backdrop-filter: blur(3px);
+    display: none; align-items: center; justify-content: center; padding: 24px;
+    cursor: zoom-out;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox img { max-width: min(1000px, 92vw); max-height: 86vh; border-radius: 12px; box-shadow: 0 24px 80px rgba(0,0,0,.5); }
+  .lightbox .lb-close {
+    position: absolute; top: 18px; right: 18px;
+    width: 40px; height: 40px; border-radius: 50%; border: none; cursor: pointer;
+    background: rgba(255,255,255,.92); color: #1c1917; font-size: 17px; font-weight: 700;
+  }
+
+  /* ============ Back to top ============ */
+  .to-top {
+    position: fixed; left: 18px; bottom: 18px; z-index: 50;
+    width: 42px; height: 42px; border-radius: 50%; border: none; cursor: pointer;
+    background: var(--ink); color: var(--gold); font-size: 17px;
+    box-shadow: var(--shadow-lg);
+    opacity: 0; pointer-events: none; transition: opacity .25s;
+  }
+  .to-top.show { opacity: 1; pointer-events: auto; }
+
+  /* ============ Responsive ============ */
+  @media (max-width: 1023px) {
+    .grid-2 { grid-template-columns: 1fr; }
+    .stats-card { grid-template-columns: 1fr 1fr; }
+    .gown-grid { grid-template-columns: 1fr; }
+    .gown-photo { min-height: 240px; max-height: 300px; }
+    .summary-cards { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    .hero-img { height: 520px; }
+    .stats-card { grid-template-columns: 1fr; padding: 16px; }
+    .fee-row { grid-template-columns: 1fr; }
+    .dot-list, .check-list { grid-template-columns: 1fr; }
+    .fee-cards { grid-template-columns: 1fr; }
+    .decision-summary { grid-template-columns: 1fr; }
+    .brand-name { display: none; }
+    .print-btn .print-label { display: none; }
+    .section { padding: 44px 0; }
+    .chart { height: 240px; gap: 6px 14px; }
+    .chart-labels { gap: 6px 14px; }
+    .chart-label { font-size: 9.5px; }
+    .bar { width: 22px; }
+  }
+
+  /* ============ Print ============ */
+  @media print {
+    .site-header, .to-top, .lightbox, .hero-actions { display: none !important; }
+    body { background: #fff; }
+    .hero-img { height: 220px; }
+    .card, .sum-card, .chart-card, .table-card { box-shadow: none; break-inside: avoid; }
+    section { break-inside: avoid-page; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="wrap nav-bar">
+    <a class="brand" href="#top">
+      <span class="brand-badge">🎓</span>
+      <span class="brand-name">Graduation 2026<span class="brand-sub">Ceremony Proposal</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Proposal sections">
+      <a href="#venues">Venues</a>
+      <a href="#photographer">Photographer</a>
+      <a href="#videographer">Videographer</a>
+      <a href="#photo-booth">Photo Booth</a>
+      <a href="#gown">Gown</a>
+      <a href="#budget">Budget</a>
+      <a href="#videos">Videos</a>
+    </nav>
+    <button class="print-btn" onclick="window.print()" aria-label="Print this proposal">🖨️ <span class="print-label">Print</span></button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" aria-label="Proposal overview">
+    <img class="hero-img" src="images/graudation.png" alt="Graduates celebrating during a university graduation ceremony">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-tag">For Management Review · Academic Year 2025 – 2026</span>
+      <h1>UoR Graduation Ceremony Proposal</h1>
+      
+      <div class="hero-actions">
+        <a class="btn-gold" href="#budget">View Budget Comparison</a>
+        <a class="btn-ghost" href="#venues">Explore Venues</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap stats-strip">
+    <dl class="stats-card">
+      <div class="stat"><span class="stat-ico">📅</span><div><dt class="stat-label">Proposed Ceremony Date</dt><dd class="stat-value">December 2026</dd></div></div>
+      <div class="stat"><span class="stat-ico">🎓</span><div><dt class="stat-label">Expected Graduates (MM) </dt><dd class="stat-value">60 Learners</dd></div></div>
+      <div class="stat"><span class="stat-ico">👥</span><div><dt class="stat-label">Expected Guests</dt><dd class="stat-value">180 - 200 pax</dd></div></div>
+      <div class="stat"><span class="stat-ico">💰</span><div><dt class="stat-label">Estimated Total Budget</dt><dd class="stat-value">MMK 25,000,000</dd></div></div>
+    </dl>
+    
+  </div>
+
+  <!-- ================= 01 BUDGET DECISION ================= -->
+  <section id="budget" class="section tint">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-num-row"><span class="section-num">01</span><span class="section-rule"></span></div>
+        <h2>Budget Comparison</h2>
+        <p class="sub">Management decision summary for 60 graduates and 200 guests. All figures are shown in MMK unless otherwise stated.</p>
+      </div>
+
+      <div class="decision-summary" aria-label="Management decision summary">
+        <div class="decision-box">
+          <span class="decision-label">Package A · Recommended</span>
+          <h3>Lotte Hotel Yangon</h3>
+          <p>Crystal Room · Credit card payment accepted</p>
+          <p class="decision-total">Estimated total: MMK 22,050,000</p>
+        </div>
+        <div class="decision-box recommended">
+          <span class="decision-label">Package B </span>
+          <h3>Novotel Hotel Yangon</h3>
+          <p>Pathein Ball Room · Cash payment in MMK recommended</p>
+          <p class="decision-total">Estimated total: MMK 19,305,000</p>
+        </div>
+      </div>
+
+      <div class="table-card">
+        <div class="table-heading">
+          <h3>Detailed Cost Comparison</h3>
+          <p>Compare each cost category before approving the venue.</p>
+        </div>
+        <div class="table-scroll">
+          <table class="budget">
+            <caption style="position:absolute;left:-9999px">Budget comparison between Package A — Lotte Hotel Yangon, Myanmar and Package B — Novotel Hotel Yangon, Myanmar</caption>
+            <thead>
+              <tr><th scope="col">Line Item</th><th scope="col" class="num">Package A (Crystal Room)</th><th scope="col" class="num">Package B (Pathein Ball Room)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Venue Rental</td><td class="num">Rental Fee: USD 0 — 2 hours complimentary with a minimum catering order of 100 pax.</td><td class="num">Rental Fee: USD 0 — 2 hours complimentary with a minimum catering order of 100 pax.</td></tr>
+              <tr><td>Catering (200 pax)</td><td class="num">USD 4000 (MMK 14,800,000)</td><td class="num">USD 4000 (MMK 14,800,000)</td></tr>
+              <tr><td>Photography</td><td class="num">MMK 2,000,000</td><td class="num">MMK 1,500,000</td></tr>
+              <tr><td>Videography</td><td class="num">MMK 1,500,000</td><td class="num">MMK 700,000</td></tr>
+              <tr><td>Photo Booth (360°)</td><td class="num">MMK 700,000</td><td class="num">MMK 700,000</td></tr>
+              <tr><td>Classic Booth</td><td class="num">MMK 1,050,000</td><td class="num">MMK 1,050,000</td></tr>
+              <tr><td>Gown Rental (60 sets)</td><td class="num">Paid by learners individually</td><td class="num">Paid by learners individually</td></tr>
+              <tr><td>MC Fees</td><td class="num">MMK 2,000,000</td><td class="num">MMK 1,500,000</td></tr>
+              <tr><td>Contingency (5%)</td><td class="num"></td><td class="num"></td></tr>
+              <tr class="total"><td>Estimated Total</td><td class="num">MMK 22,050,000</td><td class="num">MMK 19,305,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-note">
+          <p><strong>Budget basis:</strong> The proposal is calculated for 200 guests: 60 graduating learners, 30 special guests and staff, and approximately 110 guardians.</p>
+          <p class="scenario-note"><strong>Alternative attendance scenario:</strong> If the company allows only one guardian per graduate, the university-covered attendance may be reduced to approximately 150 guests (60 graduating learners, 60 guardians and 30 special guests/staff). The remaining estimated 50 guardians would pay for their own catering, reducing the total university cost by approximately USD 1,000.</p>
+          <p>Catering is calculated at the venue's per-pax rate × 200 guests. A 5% contingency is added for décor, signage and miscellaneous expenses. Hotel rates use the Myanmar government exchange rate; other suppliers may use the prevailing market exchange rate for USD payments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 02 VENUES ================= -->
+  <section id="venues" class="section white">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-num-row"><span class="section-num">02</span><span class="section-rule"></span></div>
+        <h2>Venue Selection</h2>
+        <p class="sub">Two Shortlisted Venues - Most Popular in Myanmar</p>
+      </div>
+
+      <div class="grid-2">
+        <!-- Venue A -->
+        <article class="card">
+          <div class="card-head">
+            <div><h3>LOTTE HOTEL YANGON</h3><p class="tagline">Crystal Ballroom</p>
+            <p><a href="https://www.lottehotel.com/yangon" target="_blank" rel="noopener">View Details ↗</a></p></div>
+            <span class="badge-rec">✨ Recommended</span>
+          </div>
+          <div class="card-body">
+            <div class="photo-grid">
+              <button data-lb="images/Lotte/Lotte_1.jpg" aria-label="Enlarge photo 1 of LOTTE HOTEL YANGON"><img src="images/Lotte/Lotte_1.jpg" alt="LOTTE HOTEL YANGON — Crystal Ballroom" loading="lazy"></button>
+              <button data-lb="images/Lotte/Lotte_2.jpg" aria-label="Enlarge photo 2 of LOTTE HOTEL YANGON"><img src="images/Lotte/Lotte_2.jpg" alt="LOTTE HOTEL YANGON — Ceremony stage" loading="lazy"></button>
+              <button data-lb="images/Lotte/Lotte_3.jpg" aria-label="Enlarge photo 3 of LOTTE HOTEL YANGON"><img src="images/Lotte/Lotte_3.jpg" alt="LOTTE HOTEL YANGON — Marble foyer" loading="lazy"></button>
+              <button data-lb="images/Lotte/Lotte_5.png" aria-label="Enlarge photo 4 of LOTTE HOTEL YANGON"><img src="images/Lotte/Lotte_5.png" alt="LOTTE HOTEL YANGON — Table setting" loading="lazy"></button>
+            </div>
+            <div class="fee-row">
+              <div class="fee-box"><p class="fee-label">💳 Venue Price</p><p class="fee-value">USD 900 per hour</p><p class="fee-note">The university graduation ceremony usually takes almost two hours.
+              </p><p class="fee-note">≈ Exchange rate (1 USD = 3700 MMK)</p>
+              </div>
+
+              <div class="fee-box"><p class="fee-label">🍽 Catering / Pax</p><p class="fee-value">USD 20 <span style="font-family:var(--sans);font-size:12px;font-weight:500;color:var(--muted)">/pax</span></p>
+                <p class="fee-note">If we order catering for <b>at least 100 people</b>, the hotel will provide complimentary rooms for <b>2 hours (FOC)</b>. The number of rooms allocated will depend on the estimated number of attendees.
+</p></div>
+            </div>
+            <div class="fact-list">
+              <div class="fact"><span class="ico">📍</span><span>
+No. 82, Sin Phyu Shin Avenue, Pyay Road, 6½ Mile, Ward 11, Hlaing Township,, Yangon, Myanmar, 11051 <a class="gold-link" href="https://maps.app.goo.gl/b6AzDtNLZuZtiu8t7" target="_blank" rel="noopener">Map ↗</a></span></div>
+              <div class="fact"><span class="ico">👥</span><span>Capacity up to 1000 guests</span></div>
+            
+              <div class="fact"><span class="ico">📞</span><span>01 935 1000</span></div>
+            </div>
+            <div class="panel">
+              <p class="panel-title">Catering package</p>
+              <ul class="dot-list">
+               <li>Assorted mini cakes</li>
+                <li>Light savory finger foods</li>
+                <li>Assorted snacks</li>
+                <li>Additional sweet and savory snack selection</li>
+                <li>Choice of coffee or tea</li>
+              </ul>
+            </div>
+            <ul class="check-list">
+              <li>Complimentary stage, backdrop &amp; PA system, Wi-Fi and audio systems</li>
+              <li>Valet parking for 50 cars</li>
+              <li>Learners are allowed to take photos around the hotel premises even after the two-hour complimentary room period has ended.
+</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Venue B -->
+        <article class="card">
+          <div class="card-head">
+            <div><h3>NOVOTEL HOTEL YANGON</h3><p class="tagline">PATHEIN BALL ROOM</p>
+            <p><a href="https://www.novelhotels.com/yangon" target="_blank" rel="noopener">View Details ↗</a></p></div>
+            <span class="badge-alt">💡 Alternative</span>
+          </div>
+          <div class="card-body">
+            <div class="photo-grid">
+              <button data-lb="images/novotel/novotel_1.jpg" aria-label="Enlarge photo 1 of Novotel Hotel Yangon"><img src="images/novotel/novotel_1.jpg" alt="Novotel Hotel Yangon — main hall" loading="lazy"></button>
+              <button data-lb="images/novotel/Novotel_2.jpg" aria-label="Enlarge photo 2 of Novotel Hotel Yangon"><img src="images/novotel/Novotel_2.jpg" alt="Novotel Hotel Yangon — stage with LED wall" loading="lazy"></button>
+              <button data-lb="images/novotel/Novotel_3.jpg" aria-label="Enlarge photo 3 of Novotel Hotel Yangon"><img src="images/novotel/Novotel_3.jpg" alt="Novotel Hotel Yangon — exterior" loading="lazy"></button>
+              <button data-lb="images/novotel/Novotel_4.jpg" aria-label="Enlarge photo 4 of Novotel Hotel Yangon"><img src="images/novotel/Novotel_4.jpg" alt="Novotel Hotel Yangon — buffet catering" loading="lazy"></button>
+            </div>
+           <div class="fee-row">
+              <div class="fee-box"><p class="fee-label">💳 Venue Price</p><p class="fee-value">USD 900 per hour</p><p class="fee-note">The university graduation ceremony usually takes almost two hours.
+              </p><p class="fee-note">≈ Exchange rate (1 USD = 3700 MMK)</p>
+              </div>
+
+              <div class="fee-box"><p class="fee-label">🍽 Catering / Pax</p><p class="fee-value">USD 20 <span style="font-family:var(--sans);font-size:12px;font-weight:500;color:var(--muted)">/pax</span></p>
+                <p class="fee-note">If we order catering for <b>at least 100 people</b>, the hotel will provide complimentary rooms for <b>2 hours (FOC)</b>. The number of rooms allocated will depend on the estimated number of attendees.
+</p></div>
+            </div>
+            <div class="fact-list">
+              <div class="fact"><span class="ico">📍</span>
+              <span>No.459 Pyay Road, Kamayut Township, 11041 Yangon, Myanmar</span>
+              </div>
+
+              <div class="fact"><span class="ico">
+                <a class="gold-link" href="https://maps.app.goo.gl/K73o7dTdfffiymAp9" target="_blank" rel="noopener">Map↗</a>
+              </div>
+              <div class="fact"><span class="ico">👥</span><span>Capacity up to 270 guests</span></div>
+            
+              <div class="fact"><span class="ico">📞</span><span>95 (1) 2305868</span></div>
+            </div>
+            <div class="panel">
+              <p class="panel-title">Catering package</p>
+              <ul class="dot-list">
+               <li>Assorted mini cakes</li>
+                <li>Light savory finger foods</li>
+                <li>Assorted snacks</li>
+                <li>Additional sweet and savory snack selection</li>
+                <li>Choice of coffee or tea</li>
+              </ul>
+            </div>
+            <ul class="check-list">
+              <li>Complimentary stage, backdrop &amp; PA system, Wi-Fi and audio systems</li>
+              <li>Valet parking for 50 cars</li>
+              <li>Learners are allowed to take photos around the hotel premises even after the two-hour complimentary room period has ended.
+              </li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 02 PHOTOGRAPHER ================= -->
+  <section id="photographer" class="section tint">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-num-row"><span class="section-num">03</span><span class="section-rule"></span></div>
+        <h2>Photographer</h2>
+        <p class="sub">Two shortlisted photo studios with transparent package pricing, camera equipment, coverage duration and sample works.</p>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <div class="card-head">
+            <div><h3>Photo Peter Studio</h3><p class="tagline">High-res photos</p></div>
+             <span class="badge-alt">Option A</span>
+          </div>
+          <div class="card-body">
+            <div class="photo-grid">
+              <div style="position:relative;aspect-ratio:4/3;border:1px solid var(--line);border-radius:10px;overflow:hidden"><img src="images/K-Htet_Photography/K5.jpg" alt="Everlight Studio sample — graduate portrait" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
+              <div style="position:relative;aspect-ratio:4/3;border:1px solid var(--line);border-radius:10px;overflow:hidden"><img src="images/K-Htet_Photography/K6.jpg" alt="Everlight Studio sample — family on stage" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
+            </div>
+            <div class="fee-box"><p class="fee-label">💳 Package Price</p><p class="fee-value">MMK 2,000,000 </p></div>
+            <div class="fact-list">
+              <div class="fact"><span class="ico">📷</span><span><strong>Cameras &amp; gear:</strong> </span></div>
+              <div class="fact"><span class="ico">⏱</span><span><strong>Duration:</strong> 2 - 3 hours</span></div>
+            </div>
+            <div class="panel">
+              <p class="panel-title">📦 What's included</p>
+              <ul class="check-list">
+                <li>Photography Coverage</li>        
+                <li>Group &amp; individual graduate portraits</li>
+                <li>All photos softcopy</li>
+                <li>Lighting Set Up</li>
+                <li>Production Crew</li>
+                <li>Final edited photos will be delivered according to the agreed schedule. </li>
+              </ul>
+            </div>
+            <a class="fb-btn" href="https://www.facebook.com/profile.php?id=100068713197171" target="_blank" rel="noopener">📘 View Facebook Page</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <div><h3>K Htet-YGN Photography</h3><p class="tagline">Edited high-res photos</p></div>
+            <span class="badge-alt">Option B</span>
+          </div>
+          <div class="card-body">
+            <div class="photo-grid">
+              <div style="position:relative;aspect-ratio:4/3;border:1px solid var(--line);border-radius:10px;overflow:hidden"><img src="images/K-Htet_Photography/K1.jpg" alt="K Htet-YGN Photography sample — stage candid" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
+              <div style="position:relative;aspect-ratio:4/3;border:1px solid var(--line);border-radius:10px;overflow:hidden"><img src="images/K-Htet_Photography/K2.jpg" alt="K Htet-YGN Photography sample — graduate portrait" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
+            </div>
+            <div class="fee-box"><p class="fee-label">💳 Package Price</p><p class="fee-value">MMK 1,500,000</p></div>
+            <div class="fact-list">
+              <div class="fact">
+                <span class="ico">📷</span>
+                <span class="fact-copy">
+                  <strong>Coverage:</strong>
+                  <span class="fact-detail">3 photographers; two photos per graduate on stage; event highlights; and overall coverage inside and outside the convocation hall.</span>
+                </span>
+              </div>
+
+              <div class="fact">
+                <span class="ico">📷</span>
+                <span class="fact-copy">
+                  <strong>Gear:</strong>
+                  <span class="fact-detail">
+                    <strong>Camera:</strong> Sony A7 III × 2, Canon R6 Mark II, Canon 6D<br>
+                    <strong>Lenses:</strong> Sony 24–70mm f/2.8 GM, Sony 85mm f/1.4 GM, Tamron 27–70mm for Sony, Canon 24–70mm, Canon 70–200mm, Canon 85mm<br>
+                    <strong>Accessories:</strong> Additional lighting equipment
+                  </span>
+                </span>
+              </div>
+
+              <div class="fact">
+                <span class="ico">⏱</span>
+                <span class="fact-copy"><strong>Duration:</strong> 3 hours to 4.50 hours </span>
+              </div>
+            </div>
+            <div class="panel">
+              <p class="panel-title">📦 What's included</p>
+              <ul class="check-list">
+                <li>Unlimited Edited Photos (Softcopy)</li>
+                <li>Stage &amp; group coverage</li>
+                <li>Graduated 2 portraits for each graduate</li>
+              </ul>
+            </div>
+            <a class="fb-btn" href="https://www.facebook.com/khtetyng" target="_blank" rel="noopener">📘 View Facebook Page</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 03 VIDEOGRAPHER ================= -->
+  <section id="videographer" class="section white">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-num-row"><span class="section-num">04</span><span class="section-rule"></span></div>
+        <h2>Videographer</h2>
+        <p class="sub">Two video production studios offering full-ceremony coverage plus highlight films, with camera gear and hourly coverage listed.</p>
+      </div>
+      <div class="grid-2">
+       <article class="card">
+          <div class="card-head">
+            <div><h3>Photo Peter Studio</h3><p class="tagline">High-res photos</p></div>
+             <span class="badge-alt">Option A</span>
+          </div>
+          <div class="card-body">
+            <div class="photo-grid">
+              <div style="position:relative;aspect-ratio:4/3;border:1px solid var(--line);border-radius:10px;overflow:hidden"><img src="images/K-Htet_Photography/K7.jpg" alt="Everlight Studio sample — graduate portrait" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
+              <div style="position:relative;aspect-ratio:4/3;border:1px solid var(--line);border-radius:10px;overflow:hidden"><img src="images/K-Htet_Photography/K9.jpg" alt="Everlight Studio sample — family on stage" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
+            </div>
+            <div class="fee-box"><p class="fee-label">💳 Package Price</p><p class="fee-value">MMK 1,500,000</p></div>
+            <div class="fact-list">
+              <div class="fact"><span class="ico">📷</span><span><strong>Cameras &amp; gear:</strong> </span></div>
+              <div class="fact"><span class="ico">⏱</span><span><strong>Duration:</strong> 2 hours</span></div>
+            </div>
+            <div class="panel">
+              <p class="panel-title">📦 What's included</p>
+              <ul class="check-list">
+                <li>Video Coverage</li>        
+                <li>Video Recording</li>
+                <li>Video Editing</li>
+                <li>Production Crews</li>
+                <li>Final edited videos will be delivered according to the agreed schedule. </li>
+              </ul>
+            </div>
+            <a class="fb-btn" href="https://www.facebook.com/profile.php?id=100068713197171" target="_blank" rel="noopener">📘 View Facebook Page</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <div><h3>K Htet-YGN Photography</h3><p class="tagline">Edited high-res photos</p></div>
+            <span class="badge-alt">Option B</span>
+          </div>
+          <div class="card-body">
+            <div class="photo-grid">
+              <div style="position:relative;aspect-ratio:4/3;border:1px solid var(--line);border-radius:10px;overflow:hidden"><img src="images/K-Htet_Photography/K3.jpg" alt="K Htet-YGN Photography sample — stage candid" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
+              <div style="position:relative;aspect-ratio:4/3;border:1px solid var(--line);border-radius:10px;overflow:hidden"><img src="images/K-Htet_Photography/K4.jpg" alt="K Htet-YGN Photography sample — graduate portrait" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
+            </div>
+            <div class="fee-box"><p class="fee-label">💳 Package Price</p><p class="fee-value">MMK 700,000</p></div>
+            <div class="fact-list">
+
+              <div class="fact">
+                <span class="ico">📷</span>
+                <span class="fact-copy">
+                  <span class="fact-detail">
+                    <strong>Camera:</strong> Sony A7 III × 2, Canon R6 Mark II, Canon 6D<br>
+                    <strong>Lenses:</strong> Sony 24–70mm f/2.8 GM, Sony 85mm f/1.4 GM, Tamron 27–70mm for Sony, Canon 24–70mm, Canon 70–200mm, Canon 85mm<br>
+                    <strong>Accessories:</strong> Additional lighting equipment
+                  </span>
+                </span>
+              </div>
+
+              <div class="fact">
+                <span class="ico">⏱</span>
+                <span class="fact-copy"><strong>Duration:</strong> 3 hours to 4.50 hours </span>
+              </div>
+            </div>
+            <div class="panel">
+              <p class="panel-title">📦 What's included</p>
+              <ul class="check-list">
+                <li>Short Video (Estimated 4 to 5 mins)</li>
+                <li>Overall Event Moments</li>
+              </ul>
+            </div>
+            <a class="fb-btn" href="https://www.facebook.com/khtetyng" target="_blank" rel="noopener">📘 View Facebook Page</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 04 PHOTO BOOTH ================= -->
+  <section id="photo-booth" class="section tint">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-num-row"><span class="section-num">05</span><span class="section-rule"></span></div>
+        <h2>Photo Booth</h2>
+        <p class="sub">Two entertainment options to keep guests engaged during and after the ceremony — a timeless classic booth and the trending 360° experience.</p>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <div class="booth-cover">
+            <img src="images/Photo_Booth/P1.jpg" alt="Classic photo booth with props" loading="lazy">
+            <div class="shade"></div>
+            <div class="cover-row"><h3>Classic Photo Booth</h3><span class="price-pill"><span class="cur">💳</span> MMK 1,050,000</span></div>
+          </div>
+          <div class="card-body" style="padding-top:16px">
+            <p style="font-size:13.5px;color:var(--ink-soft)">A timeless enclosed booth that prints photos on the spot. Perfect for family keepsakes — every guest walks away with a physical memory of the day.</p>
+            <div class="fact-list"><div class="fact"><span class="ico">⏱</span><span><strong>Duration:</strong> 3 hours service</span></div></div>
+            <div class="panel">
+              <p class="panel-title">📸 Package includes</p>
+              <ul class="check-list">
+                <li>Unlimited Photo Prints</li>
+                <li>Fabric backdrop x 1</li>
+                <li> Lighting x 1 set</li>
+                <li>Party/Fun props</li>
+                <li>Instant soft copy</li>
+                <li>Customize Layout Design (1 template in during event)</li>
+                <li>Frame design</li>
+                <li>All soft copies within 3 days after event.</li>
+                
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="booth-cover">
+            <img src="images/Photo_Booth/P3.jpg" alt="360 degree photo booth with spinning platform" loading="lazy">
+            <div class="shade"></div>
+            <div class="cover-row"><h3>360° Photo Booth</h3><span class="price-pill"><span class="cur">💳</span> MMK 700,000</span></div>
+          </div>
+          <div class="card-body" style="padding-top:16px">
+            <p style="font-size:13.5px;color:var(--ink-soft)">The trend-setting 360° spinner — guests stand on the platform while a camera arm orbits around them, creating cinematic slow-motion clips ready for social media.</p>
+            <div class="fact-list"><div class="fact"><span class="ico">⏱</span><span><strong>Duration:</strong> 3 hours service</span></div></div>
+            <div class="panel">
+              <p class="panel-title">📸 Package includes</p>
+              <ul class="check-list">
+                <li>Unlimited video</li>
+                <li>Party props</li>
+                <li>Lighting</li>
+                <li>Red carpet</li>
+                <li> Customize overlay design (1 template design)</li>
+                <li> Instant video download</li>
+                <li> All soft copies within 3 days after event</li>
+                <li>Seperator pole</li>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 05 GRADUATION GOWN ================= -->
+  <section id="gown" class="section white">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-num-row"><span class="section-num">06</span><span class="section-rule"></span></div>
+        <h2>Graduation Gown</h2>
+        <p class="sub">Gown rental programme for 600 graduating students — rental, refundable deposit and damage liability are listed below for approval.</p>
+      </div>
+      <div class="gown-grid">
+        <div class="gown-photo"><img src="images/Graduation_Gown.png" alt="Graduation gowns and caps prepared for rental" loading="lazy"></div>
+        <div>
+          <div class="fee-cards">
+            <div class="fee-card">
+              <p class="fc-label"><span class="fc-ico ico-gold">💳</span> Rental Fee</p>
+              <p class="fc-value">MMK 60,000<span class="fc-unit">per gown / set</span></p>
+              <p class="fc-note">Includes cap, hood and university sash</p>
+            </div>
+            <div class="fee-card">
+              <p class="fc-label"><span class="fc-ico ico-green">👗</span> Deposit Fee</p>
+              <p class="fc-value">MMK 50,000<span class="fc-unit">per set (refundable)</span></p>
+              <p class="fc-note">Collected at fitting, refunded on return in good condition</p>
+            </div>
+            <div class="fee-card">
+              <p class="fc-label"><span class="fc-ico ico-orange">🛡</span> Damage Fee — Minor</p>
+              <p class="fc-value">MMK 50,000<span class="fc-unit">per set</span></p>
+              <p class="fc-note">Loose stitching, small stains, missing buttons</p>
+            </div>
+            <div class="fee-card">
+              <p class="fc-label"><span class="fc-ico ico-red">⚠️</span> Damage Fee — Major</p>
+              <p class="fc-value">MMK 100,000<span class="fc-unit">per set (replacement)</span></p>
+              <p class="fc-note">Torn, burned or unrepairable — charged at replacement value</p>
+            </div>
+          </div>
+          <div class="terms">
+            <p class="terms-title">⚠️ Terms &amp; Conditions</p>
+            <ul>
+              <li>Deposit is fully refundable when the gown is returned undamaged within 7 days after the ceremony.</li>
+              <li>Minor damage (loose stitching, small stains, missing button) — flat repair fee of MMK 50,000 per set.</li>
+              <li>Torn or unrepairable sets are charged at replacement value of MMK 100,000 per set (deposit + rental are not offset).</li>
+              <li>Fitting sessions will be arranged 2 weeks before the ceremony at Theigi Shwe Yi.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 07 SAMPLE VIDEOS ================= -->
+  <section id="videos" class="section white">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-num-row"><span class="section-num">07</span><span class="section-rule"></span></div>
+        <h2>Sample Videos — Other Universities</h2>
+        <p class="sub">Reference highlight videos from other universities' graduation ceremonies, to illustrate the expected look and feel of our own coverage. Click to watch with sound.</p>
+      </div>
+      <div class="grid-2">
+        <article class="video-card">
+          <div class="video-frame">
+            <video controls preload="metadata" aria-label="Strategy First video">
+              <source src="videos/Strategy_First.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
+          <div class="video-meta">
+            <h3>🎓 Strategy First (Myanmar) Wolverhampton UK Graduation Video</h3>
+            <p>Reference video for the proposed graduation ceremony coverage.</p>
+          </div>
+        </article>
+
+        <article class="video-card">
+          <div class="video-frame">
+            <video controls preload="metadata" aria-label="MIC Graduation Ceremony 2025 video">
+              <source src="videos/👩_🎓🎉 𝐌𝐈𝐂 𝐆𝐫𝐚𝐝𝐮𝐚𝐭𝐢𝐨𝐧 𝐂𝐞𝐫𝐞𝐦𝐨𝐧𝐲 𝟐𝟎𝟐𝟓👩_🎓❤️.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
+          <div class="video-meta">
+            <h3>🎓 MIC Graduation Ceremony 2025 🎓</h3>
+            <p>Reference video for the proposed graduation ceremony coverage.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="footer-badge">🎓</span>
+        <div>
+          <p class="fb-title">Graduation Ceremony Proposal</p>
+          <p class="fb-sub">Academic Year 2025 – 2026</p>
+        </div>
+      </div>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged venue photo">
+  <button class="lb-close" id="lbClose" aria-label="Close photo">✕</button>
+  <img id="lbImg" src="" alt="Enlarged venue photo">
+</div>
+
+<!-- Back to top -->
+<button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+<script>
+  // ---------- Lightbox ----------
+  var lightbox = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lbImg');
+  document.querySelectorAll('[data-lb]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      lbImg.src = btn.getAttribute('data-lb');
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  lightbox.addEventListener('click', closeLightbox);
+  document.getElementById('lbClose').addEventListener('click', closeLightbox);
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLightbox(); });
+
+  // ---------- Scroll spy ----------
+  var navMap = {};
+  document.querySelectorAll('.nav-links a').forEach(function (a) {
+    navMap[a.getAttribute('href').slice(1)] = a;
+  });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        Object.keys(navMap).forEach(function (id) { navMap[id].classList.remove('active'); });
+        var link = navMap[entry.target.id];
+        if (link) link.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+  Object.keys(navMap).forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el) observer.observe(el);
+  });
+
+  // ---------- YouTube facade ----------
+  // On HTTPS hosting (e.g. GitHub Pages) the click embeds the player inline.
+  // When opened locally (file://), YouTube blocks embedded playback (Error 153),
+  // so we open the video on youtube.com in a new tab instead.
+  document.querySelectorAll('.video-frame[data-yt]').forEach(function (frame) {
+    var id = frame.getAttribute('data-yt');
+    function play() {
+      if (window.location.protocol === 'file:') {
+        window.open('https://www.youtube.com/watch?v=' + id, '_blank', 'noopener');
+      } else {
+        frame.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + id + '?rel=0&autoplay=1" title="University graduation ceremony sample video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>';
+        frame.style.cursor = 'default';
+      }
+    }
+    frame.addEventListener('click', play);
+    frame.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); play(); }
+    });
+  });
+
+  // ---------- Back to top ----------
+  var toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', function () {
+    toTop.classList.toggle('show', window.scrollY > 600);
+  }, { passive: true });
+  toTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+</script>
+</body>
+</html>
