@@ -157,6 +157,9 @@
   }
   .stat-label { font-size: 10.5px; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); }
   .stat-value { font-size: 14px; font-weight: 700; color: var(--ink); margin-top: 2px; }
+  .stat-budget { background: var(--green-soft); border: 2px solid var(--gold); }
+  .stat-budget .stat-ico { background: var(--gold); color: var(--ink); }
+  .stat-budget .stat-value { font-size: 24px; line-height: 1.15; color: var(--ink); }
   .prepared-note { text-align: center; font-size: 12.5px; color: var(--muted); margin-top: 16px; }
   .prepared-note strong { color: var(--ink-soft); font-weight: 600; }
 
@@ -321,7 +324,7 @@
   .decision-box.recommended .decision-label { color: var(--green-dark); }
   .decision-box h3 { font-family: var(--serif); font-size: 20px; margin-top: 5px; }
   .decision-box p { color: var(--ink-soft); font-size: 12.5px; margin-top: 4px; }
-  .decision-box .decision-total { color: var(--gold-dark); font-size: 18px; font-weight: 800; margin-top: 10px; }
+  .decision-box .decision-total { color: var(--gold-dark); font-size: 22px; font-weight: 800; line-height: 1.25; margin-top: 10px; }
   .decision-box.recommended .decision-total { color: var(--green-dark); }
   .table-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
   .table-heading { padding: 18px 22px 14px; border-bottom: 1px solid var(--line); }
@@ -329,13 +332,23 @@
   .table-heading p { color: var(--muted); font-size: 12.5px; margin-top: 3px; }
   .table-scroll { overflow-x: auto; }
   table.budget { width: 100%; min-width: 560px; border-collapse: collapse; font-size: 13.5px; }
-  .budget thead th { background: #f5f5f4; text-align: left; padding: 13px 22px; font-weight: 700; color: var(--ink-soft); border-bottom: 1px solid var(--line); }
-  .budget thead th:last-child { color: var(--green-dark); }
-  .budget td { padding: 11px 22px; border-bottom: 1px solid #f5f5f4; color: var(--ink-soft); vertical-align: top; }
+  .budget thead th { background: #f5f5f4; text-align: left; padding: 14px 22px; font-weight: 700; color: var(--ink-soft); border-bottom: 2px solid var(--gold); }
+  .budget thead th:nth-child(2), .budget thead th:last-child { text-align: center; }
+  .budget thead th:nth-child(2) { border-left: 2px solid var(--gold); color: var(--gold-dark); }
+  .budget thead th:last-child { border-left: 2px solid var(--green); color: var(--green-dark); }
+  .budget td { padding: 12px 22px; border-bottom: 1px solid #f5f5f4; color: var(--ink-soft); vertical-align: top; }
+  .budget td:nth-child(2) { border-left: 2px solid var(--gold-border); }
+  .budget td:last-child { border-left: 2px solid var(--green-border); }
   .budget th.num, .budget td.num { text-align: right; font-variant-numeric: tabular-nums; }
-  .budget td.num { text-align: left; }
+  .budget td.num { color: var(--ink-soft); }
+  .budget td.num:not(:empty) { font-variant-numeric: tabular-nums; }
+  .budget-amount { display: inline-block; color: var(--ink); font-size: 15px; font-weight: 800; white-space: nowrap; }
+  .budget-total-amount { display: inline-block; color: var(--ink); font-size: 22px; font-weight: 800; white-space: nowrap; }
+  .budget td:nth-child(2) strong, .budget td:nth-child(3) strong { color: var(--ink); }
   .budget tbody tr:nth-child(even) { background: #fafaf9; }
-  .budget tr.total td { background: var(--gold-soft); font-weight: 800; color: var(--ink); border-top: 2px solid #d6d3d1; border-bottom: none; padding: 14px 22px; }
+  .budget tr.total td { background: var(--gold-soft); font-weight: 800; color: var(--ink); border-top: 3px solid var(--gold); border-bottom: none; padding: 17px 22px; }
+  .budget tr.total td:first-child { font-size: 15px; text-transform: uppercase; letter-spacing: .04em; }
+  .budget tr.total td.num { font-size: 20px; color: var(--ink); }
   .budget tr.total td:last-child { color: var(--green-dark); }
   .table-note { background: #fafaf9; border-top: 1px solid #f5f5f4; padding: 15px 22px; font-size: 12px; color: var(--muted); }
   .table-note p + p { margin-top: 8px; }
@@ -477,7 +490,7 @@
       <div class="stat"><span class="stat-ico">📅</span><div><dt class="stat-label">Proposed Ceremony Date</dt><dd class="stat-value">December 2026</dd></div></div>
       <div class="stat"><span class="stat-ico">🎓</span><div><dt class="stat-label">Expected Graduates (MM) </dt><dd class="stat-value">60 Learners</dd></div></div>
       <div class="stat"><span class="stat-ico">👥</span><div><dt class="stat-label">Expected Guests</dt><dd class="stat-value">180 - 200 pax</dd></div></div>
-      <div class="stat"><span class="stat-ico">💰</span><div><dt class="stat-label">Estimated Total Budget</dt><dd class="stat-value">MMK 25,000,000</dd></div></div>
+      <div class="stat stat-budget"><span class="stat-ico">💰</span><div><dt class="stat-label">Estimated Total Budget</dt><dd class="stat-value">MMK 25,000,000</dd></div></div>
     </dl>
     
   </div>
@@ -518,16 +531,16 @@
               <tr><th scope="col">Line Item</th><th scope="col" class="num">Package A (Crystal Room)</th><th scope="col" class="num">Package B (Pathein Ball Room)</th></tr>
             </thead>
             <tbody>
-              <tr><td>Venue Rental</td><td class="num">Rental Fee: USD 0 — 2 hours complimentary with a minimum catering order of 100 pax.</td><td class="num">Rental Fee: USD 0 — 2 hours complimentary with a minimum catering order of 100 pax.</td></tr>
-              <tr><td>Catering (200 pax)</td><td class="num">USD 4000 (MMK 14,800,000)</td><td class="num">USD 4000 (MMK 14,800,000)</td></tr>
-              <tr><td>Photography</td><td class="num">MMK 2,000,000</td><td class="num">MMK 1,500,000</td></tr>
-              <tr><td>Videography</td><td class="num">MMK 1,500,000</td><td class="num">MMK 700,000</td></tr>
-              <tr><td>Photo Booth (360°)</td><td class="num">MMK 700,000</td><td class="num">MMK 700,000</td></tr>
-              <tr><td>Classic Booth</td><td class="num">MMK 1,050,000</td><td class="num">MMK 1,050,000</td></tr>
+              <tr><td>Venue Rental</td><td class="num">Rental Fee: <span class="budget-amount">USD 0</span><br><small>(2 hours complimentary with a minimum catering order of 100 pax.)</small></td><td class="num">Rental Fee: <span class="budget-amount">USD 0</span><br><small>(2 hours complimentary with a minimum catering order of 100 pax.)</small></td></tr>
+              <tr><td>Catering (200 pax)</td><td class="num"><span class="budget-amount">USD 4,000</span><br><small>(MMK 14,800,000)</small></td><td class="num"><span class="budget-amount">USD 4,000</span><br><small>(MMK 14,800,000)</small></td></tr>
+              <tr><td>Photography</td><td class="num"><span class="budget-amount">MMK 2,000,000</span></td><td class="num"><span class="budget-amount">MMK 1,500,000</span></td></tr>
+              <tr><td>Videography</td><td class="num"><span class="budget-amount">MMK 1,500,000</span></td><td class="num"><span class="budget-amount">MMK 700,000</span></td></tr>
+              <tr><td>Photo Booth (360°)</td><td class="num"><span class="budget-amount">MMK 700,000</span></td><td class="num"><span class="budget-amount">MMK 700,000</span></td></tr>
+              <tr><td>Classic Booth</td><td class="num"><span class="budget-amount">MMK 1,050,000</span></td><td class="num"><span class="budget-amount">MMK 1,050,000</span></td></tr>
               <tr><td>Gown Rental (60 sets)</td><td class="num">Paid by learners individually</td><td class="num">Paid by learners individually</td></tr>
-              <tr><td>MC Fees</td><td class="num">MMK 2,000,000</td><td class="num">MMK 1,500,000</td></tr>
+              <tr><td>MC Fees</td><td class="num"><span class="budget-amount">MMK 2,000,000</span></td><td class="num"><span class="budget-amount">MMK 1,500,000</span></td></tr>
               <tr><td>Contingency (5%)</td><td class="num"></td><td class="num"></td></tr>
-              <tr class="total"><td>Estimated Total</td><td class="num">MMK 22,050,000</td><td class="num">MMK 19,305,000</td></tr>
+              <tr class="total"><td>Estimated Total</td><td class="num"><span class="budget-total-amount">MMK 22,050,000</span></td><td class="num"><span class="budget-total-amount">MMK 19,305,000</span></td></tr>
             </tbody>
           </table>
         </div>
