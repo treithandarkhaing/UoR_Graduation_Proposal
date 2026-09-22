@@ -95,8 +95,8 @@
   .print-btn:hover { background: var(--gold-soft); border-color: var(--gold); color: var(--gold-dark); }
 
   /* ============ Hero ============ */
-  .hero { position: relative; color: #fff; }
-  .hero-img { width: 100%; height: 460px; object-fit: cover; }
+  .hero { position: relative; color: #fff; background: var(--ink); }
+  .hero-img { width: 100%; height: 460px; object-fit: cover; opacity: .3; }
   .hero-overlay {
     position: absolute; inset: 0;
     background: linear-gradient(to bottom, rgba(28,25,23,.68), rgba(28,25,23,.42) 45%, rgba(28,25,23,.8));
@@ -490,7 +490,7 @@
       <div class="stat"><span class="stat-ico">📅</span><div><dt class="stat-label">Proposed Ceremony Date</dt><dd class="stat-value">December 2026</dd></div></div>
       <div class="stat"><span class="stat-ico">🎓</span><div><dt class="stat-label">Expected Graduates (MM) </dt><dd class="stat-value">60 Learners</dd></div></div>
       <div class="stat"><span class="stat-ico">👥</span><div><dt class="stat-label">Expected Guests</dt><dd class="stat-value">180 - 200 pax</dd></div></div>
-      <div class="stat stat-budget"><span class="stat-ico">💰</span><div><dt class="stat-label">Estimated Total Budget</dt><dd class="stat-value">MMK 25,000,000</dd></div></div>
+      <div class="stat stat-budget"><span class="stat-ico">💰</span><div><dt class="stat-label">Estimated Total Budget</dt><dd class="stat-value">USD 7,000</dd></div></div>
     </dl>
     
   </div>
@@ -501,7 +501,7 @@
       <div class="section-head">
         <div class="section-num-row"><span class="section-num">01</span><span class="section-rule"></span></div>
         <h2>Budget Comparison</h2>
-        <p class="sub">Management decision summary for 60 graduates and 200 guests. All figures are shown in MMK unless otherwise stated.</p>
+        <p>Management decision summary for 60 graduates and 200 guests. All figures are shown in USD   (1 USD = 3,700 MMK)</p>
       </div>
 
       <div class="decision-summary" aria-label="Management decision summary">
@@ -509,13 +509,15 @@
           <span class="decision-label">Package A · Recommended</span>
           <h3>Lotte Hotel Yangon</h3>
           <p>Crystal Room · Credit card payment accepted</p>
-          <p class="decision-total">Estimated total: MMK 22,050,000</p>
+          <p class="decision-total">Estimated total: USD 6,010</p>
+          <p>Currency Exchange Rate: 1 USD = 3,700 MMK (MM Government Rate)</p>
         </div>
         <div class="decision-box recommended">
           <span class="decision-label">Package B </span>
           <h3>Novotel Hotel Yangon</h3>
           <p>Pathein Ball Room · Cash payment in MMK recommended</p>
-          <p class="decision-total">Estimated total: MMK 19,305,000</p>
+          <p class="decision-total">Estimated total: USD 5,530</p>
+          <p>Currency Exchange Rate: 1 USD = 3,700 MMK (MM Government Rate)</p>
         </div>
       </div>
 
@@ -533,16 +535,21 @@
             <tbody>
               <tr><td>Venue Rental</td><td class="num">Rental Fee: <span class="budget-amount">USD 0</span><br><small>(2 hours complimentary with a minimum catering order of 100 pax.)</small></td><td class="num">Rental Fee: <span class="budget-amount">USD 0</span><br><small>(2 hours complimentary with a minimum catering order of 100 pax.)</small></td></tr>
               <tr><td>Catering (200 pax)</td><td class="num"><span class="budget-amount">USD 4,000</span><br><small>(MMK 14,800,000)</small></td><td class="num"><span class="budget-amount">USD 4,000</span><br><small>(MMK 14,800,000)</small></td></tr>
-              <tr><td>Photography</td><td class="num"><span class="budget-amount">MMK 2,000,000</span></td><td class="num"><span class="budget-amount">MMK 1,500,000</span></td></tr>
-              <tr><td>Videography</td><td class="num"><span class="budget-amount">MMK 1,500,000</span></td><td class="num"><span class="budget-amount">MMK 700,000</span></td></tr>
-              <tr><td>Photo Booth (360°)</td><td class="num"><span class="budget-amount">MMK 700,000</span></td><td class="num"><span class="budget-amount">MMK 700,000</span></td></tr>
-              <tr><td>Classic Booth</td><td class="num"><span class="budget-amount">MMK 1,050,000</span></td><td class="num"><span class="budget-amount">MMK 1,050,000</span></td></tr>
+              <tr><td>Photography</td><td class="num"><span class="budget-amount">USD 550</span></td><td class="num"><span class="budget-amount">USD 410</span></td></tr>
+              <tr><td>Videography</td><td class="num"><span class="budget-amount">USD 410</span></td><td class="num"><span class="budget-amount">USD 200</span></td></tr>
+              <tr><td>Photo Booth (360°)</td><td class="num"><span class="budget-amount">USD 200</span></td><td class="num"><span class="budget-amount">USD 200</span></td></tr>
+              <tr><td>Classic Booth</td><td class="num"><span class="budget-amount">USD 300</span></td><td class="num"><span class="budget-amount">USD 300</span></td></tr>
               <tr><td>Gown Rental (60 sets)</td><td class="num">Paid by learners individually</td><td class="num">Paid by learners individually</td></tr>
-              <tr><td>MC Fees</td><td class="num"><span class="budget-amount">MMK 2,000,000</span></td><td class="num"><span class="budget-amount">MMK 1,500,000</span></td></tr>
+              <tr><td>MC Fees</td><td class="num"><span class="budget-amount">USD 550</span></td><td class="num"><span class="budget-amount">USD 420</span></td></tr>
               <tr><td>Contingency (5%)</td><td class="num"></td><td class="num"></td></tr>
-              <tr class="total"><td>Estimated Total</td><td class="num"><span class="budget-total-amount">MMK 22,050,000</span></td><td class="num"><span class="budget-total-amount">MMK 19,305,000</span></td></tr>
+              <tr class="total"><td>Estimated Total</td><td class="num"><span class="budget-total-amount">USD 6010</span></td><td class="num"><span class="budget-total-amount">USD 5,530</span></td></tr>
             </tbody>
           </table>
+
+          <div class="table-note">
+            <p><strong>Additional Expenses: </strong>Certificate holders, transportation fees, commercial fees, and other related expenses.</p>
+          </div>
+          
         </div>
         <div class="table-note">
           <p><strong>Budget basis:</strong> The proposal is calculated for 200 guests: 60 graduating learners, 30 special guests and staff, and approximately 110 guardians.</p>
@@ -688,7 +695,7 @@ No. 82, Sin Phyu Shin Avenue, Pyay Road, 6½ Mile, Ward 11, Hlaing Township,, Ya
               <div style="position:relative;aspect-ratio:4/3;border:1px solid var(--line);border-radius:10px;overflow:hidden"><img src="images/K-Htet_Photography/K5.jpg" alt="Everlight Studio sample — graduate portrait" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
               <div style="position:relative;aspect-ratio:4/3;border:1px solid var(--line);border-radius:10px;overflow:hidden"><img src="images/K-Htet_Photography/K6.jpg" alt="Everlight Studio sample — family on stage" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
             </div>
-            <div class="fee-box"><p class="fee-label">💳 Package Price</p><p class="fee-value">MMK 2,000,000 </p></div>
+            <div class="fee-box"><p class="fee-label">💳 Package Price</p><p class="fee-value">USD 550 </p></div>
             <div class="fact-list">
               <div class="fact"><span class="ico">📷</span><span><strong>Cameras &amp; gear:</strong> </span></div>
               <div class="fact"><span class="ico">⏱</span><span><strong>Duration:</strong> 2 - 3 hours</span></div>
@@ -718,7 +725,7 @@ No. 82, Sin Phyu Shin Avenue, Pyay Road, 6½ Mile, Ward 11, Hlaing Township,, Ya
               <div style="position:relative;aspect-ratio:4/3;border:1px solid var(--line);border-radius:10px;overflow:hidden"><img src="images/K-Htet_Photography/K1.jpg" alt="K Htet-YGN Photography sample — stage candid" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
               <div style="position:relative;aspect-ratio:4/3;border:1px solid var(--line);border-radius:10px;overflow:hidden"><img src="images/K-Htet_Photography/K2.jpg" alt="K Htet-YGN Photography sample — graduate portrait" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
             </div>
-            <div class="fee-box"><p class="fee-label">💳 Package Price</p><p class="fee-value">MMK 1,500,000</p></div>
+            <div class="fee-box"><p class="fee-label">💳 Package Price</p><p class="fee-value">USD 410</p></div>
             <div class="fact-list">
               <div class="fact">
                 <span class="ico">📷</span>
@@ -779,7 +786,7 @@ No. 82, Sin Phyu Shin Avenue, Pyay Road, 6½ Mile, Ward 11, Hlaing Township,, Ya
               <div style="position:relative;aspect-ratio:4/3;border:1px solid var(--line);border-radius:10px;overflow:hidden"><img src="images/K-Htet_Photography/K7.jpg" alt="Everlight Studio sample — graduate portrait" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
               <div style="position:relative;aspect-ratio:4/3;border:1px solid var(--line);border-radius:10px;overflow:hidden"><img src="images/K-Htet_Photography/K9.jpg" alt="Everlight Studio sample — family on stage" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
             </div>
-            <div class="fee-box"><p class="fee-label">💳 Package Price</p><p class="fee-value">MMK 1,500,000</p></div>
+            <div class="fee-box"><p class="fee-label">💳 Package Price</p><p class="fee-value">USD 410</p></div>
             <div class="fact-list">
               <div class="fact"><span class="ico">📷</span><span><strong>Cameras &amp; gear:</strong> </span></div>
               <div class="fact"><span class="ico">⏱</span><span><strong>Duration:</strong> 2 hours</span></div>
@@ -808,7 +815,7 @@ No. 82, Sin Phyu Shin Avenue, Pyay Road, 6½ Mile, Ward 11, Hlaing Township,, Ya
               <div style="position:relative;aspect-ratio:4/3;border:1px solid var(--line);border-radius:10px;overflow:hidden"><img src="images/K-Htet_Photography/K3.jpg" alt="K Htet-YGN Photography sample — stage candid" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
               <div style="position:relative;aspect-ratio:4/3;border:1px solid var(--line);border-radius:10px;overflow:hidden"><img src="images/K-Htet_Photography/K4.jpg" alt="K Htet-YGN Photography sample — graduate portrait" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
             </div>
-            <div class="fee-box"><p class="fee-label">💳 Package Price</p><p class="fee-value">MMK 700,000</p></div>
+            <div class="fee-box"><p class="fee-label">💳 Package Price</p><p class="fee-value">USD 200</p></div>
             <div class="fact-list">
 
               <div class="fact">
@@ -854,7 +861,7 @@ No. 82, Sin Phyu Shin Avenue, Pyay Road, 6½ Mile, Ward 11, Hlaing Township,, Ya
           <div class="booth-cover">
             <img src="images/Photo_Booth/P1.jpg" alt="Classic photo booth with props" loading="lazy">
             <div class="shade"></div>
-            <div class="cover-row"><h3>Classic Photo Booth</h3><span class="price-pill"><span class="cur">💳</span> MMK 1,050,000</span></div>
+            <div class="cover-row"><h3>Classic Photo Booth</h3><span class="price-pill"><span class="cur">💳</span> USD 300</span></div>
           </div>
           <div class="card-body" style="padding-top:16px">
             <p style="font-size:13.5px;color:var(--ink-soft)">A timeless enclosed booth that prints photos on the spot. Perfect for family keepsakes — every guest walks away with a physical memory of the day.</p>
@@ -880,7 +887,7 @@ No. 82, Sin Phyu Shin Avenue, Pyay Road, 6½ Mile, Ward 11, Hlaing Township,, Ya
           <div class="booth-cover">
             <img src="images/Photo_Booth/P3.jpg" alt="360 degree photo booth with spinning platform" loading="lazy">
             <div class="shade"></div>
-            <div class="cover-row"><h3>360° Photo Booth</h3><span class="price-pill"><span class="cur">💳</span> MMK 700,000</span></div>
+            <div class="cover-row"><h3>360° Photo Booth</h3><span class="price-pill"><span class="cur">💳</span> USD 200</span></div>
           </div>
           <div class="card-body" style="padding-top:16px">
             <p style="font-size:13.5px;color:var(--ink-soft)">The trend-setting 360° spinner — guests stand on the platform while a camera arm orbits around them, creating cinematic slow-motion clips ready for social media.</p>
@@ -916,22 +923,22 @@ No. 82, Sin Phyu Shin Avenue, Pyay Road, 6½ Mile, Ward 11, Hlaing Township,, Ya
           <div class="fee-cards">
             <div class="fee-card">
               <p class="fc-label"><span class="fc-ico ico-gold">💳</span> Rental Fee</p>
-              <p class="fc-value">MMK 60,000<span class="fc-unit">per gown / set</span></p>
+              <p class="fc-value">USD 17<span class="fc-unit">per gown / set</span></p>
               <p class="fc-note">Includes cap, hood and university sash</p>
             </div>
             <div class="fee-card">
               <p class="fc-label"><span class="fc-ico ico-green">👗</span> Deposit Fee</p>
-              <p class="fc-value">MMK 50,000<span class="fc-unit">per set (refundable)</span></p>
+              <p class="fc-value">USD 14<span class="fc-unit">per set (refundable)</span></p>
               <p class="fc-note">Collected at fitting, refunded on return in good condition</p>
             </div>
             <div class="fee-card">
               <p class="fc-label"><span class="fc-ico ico-orange">🛡</span> Damage Fee — Minor</p>
-              <p class="fc-value">MMK 50,000<span class="fc-unit">per set</span></p>
+              <p class="fc-value">USD 14<span class="fc-unit">per set</span></p>
               <p class="fc-note">Loose stitching, small stains, missing buttons</p>
             </div>
             <div class="fee-card">
               <p class="fc-label"><span class="fc-ico ico-red">⚠️</span> Damage Fee — Major</p>
-              <p class="fc-value">MMK 100,000<span class="fc-unit">per set (replacement)</span></p>
+              <p class="fc-value">USD 27<span class="fc-unit">per set (replacement)</span></p>
               <p class="fc-note">Torn, burned or unrepairable — charged at replacement value</p>
             </div>
           </div>
@@ -939,9 +946,10 @@ No. 82, Sin Phyu Shin Avenue, Pyay Road, 6½ Mile, Ward 11, Hlaing Township,, Ya
             <p class="terms-title">⚠️ Terms &amp; Conditions</p>
             <ul>
               <li>Deposit is fully refundable when the gown is returned undamaged within 7 days after the ceremony.</li>
-              <li>Minor damage (loose stitching, small stains, missing button) — flat repair fee of MMK 50,000 per set.</li>
-              <li>Torn or unrepairable sets are charged at replacement value of MMK 100,000 per set (deposit + rental are not offset).</li>
+              <li>Minor damage (loose stitching, small stains, missing button) — flat repair fee of USD 14 per set.</li>
+              <li>Torn or unrepairable sets are charged at replacement value of USD 17 per set (deposit + rental are not offset).</li>
               <li>Fitting sessions will be arranged 2 weeks before the ceremony at Theigi Shwe Yi.</li>
+              <li>Gowns must be ordered at least 1.5 months before the graduation date.</li>
             </ul>
           </div>
         </div>
