@@ -266,6 +266,32 @@
   .booth-cover .shade { position: absolute; inset: 0; background: linear-gradient(to top, rgba(28,25,23,.72), transparent 55%); }
   .booth-cover .cover-row { position: absolute; left: 16px; right: 16px; bottom: 12px; display: flex; align-items: flex-end; justify-content: space-between; gap: 10px; }
   .booth-cover h3 { font-family: var(--serif); font-size: 21px; color: #fff; text-shadow: 0 1px 8px rgba(0,0,0,.4); }
+  .booth-video-cover {
+    aspect-ratio: 16 / 10;
+    background: #0c0a09;
+  }
+  .booth-video-cover video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    background: #0c0a09;
+  }
+  .booth-video-cover .shade {
+    height: 44%;
+    bottom: auto;
+    background: linear-gradient(to bottom, rgba(28,25,23,.72), transparent 85%);
+    pointer-events: none;
+  }
+  .booth-video-cover .cover-row {
+    top: 12px;
+    bottom: auto;
+    align-items: flex-start;
+    pointer-events: none;
+  }
+  .booth-video-cover .price-pill {
+    pointer-events: auto;
+  }
   .price-pill {
     background: rgba(255,255,255,.96); border-radius: 999px;
     padding: 5px 13px; font-size: 13.5px; font-weight: 800; color: var(--ink);
@@ -434,6 +460,8 @@
     .chart-labels { gap: 6px 14px; }
     .chart-label { font-size: 9.5px; }
     .bar { width: 22px; }
+    .booth-cover .cover-row { align-items: flex-start; flex-direction: column; }
+    .booth-video-cover { aspect-ratio: 4 / 3; }
   }
 
   /* ============ Print ============ */
@@ -692,8 +720,8 @@ No. 82, Sin Phyu Shin Avenue, Pyay Road, 6½ Mile, Ward 11, Hlaing Township,, Ya
           </div>
           <div class="card-body">
             <div class="photo-grid">
-              <div style="position:relative;aspect-ratio:4/3;border:1px solid var(--line);border-radius:10px;overflow:hidden"><img src="images/K-Htet_Photography/K5.jpg" alt="Everlight Studio sample — graduate portrait" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
-              <div style="position:relative;aspect-ratio:4/3;border:1px solid var(--line);border-radius:10px;overflow:hidden"><img src="images/K-Htet_Photography/K6.jpg" alt="Everlight Studio sample — family on stage" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
+              <div style="position:relative;aspect-ratio:4/3;border:1px solid var(--line);border-radius:10px;overflow:hidden"><img src="images/K-Htet_Photography/K10.jpg" alt="Everlight Studio sample — graduate portrait" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
+              <div style="position:relative;aspect-ratio:4/3;border:1px solid var(--line);border-radius:10px;overflow:hidden"><img src="images/K-Htet_Photography/K11.jpg" alt="Everlight Studio sample — family on stage" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
             </div>
             <div class="fee-box"><p class="fee-label">💳 Package Price</p><p class="fee-value">USD 550 </p></div>
             <div class="fact-list">
@@ -722,8 +750,8 @@ No. 82, Sin Phyu Shin Avenue, Pyay Road, 6½ Mile, Ward 11, Hlaing Township,, Ya
           </div>
           <div class="card-body">
             <div class="photo-grid">
-              <div style="position:relative;aspect-ratio:4/3;border:1px solid var(--line);border-radius:10px;overflow:hidden"><img src="images/K-Htet_Photography/K1.jpg" alt="K Htet-YGN Photography sample — stage candid" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
-              <div style="position:relative;aspect-ratio:4/3;border:1px solid var(--line);border-radius:10px;overflow:hidden"><img src="images/K-Htet_Photography/K2.jpg" alt="K Htet-YGN Photography sample — graduate portrait" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
+              <div style="position:relative;aspect-ratio:4/3;border:1px solid var(--line);border-radius:10px;overflow:hidden"><img src="images/K-Htet_Photography/K12.jpg" alt="K Htet-YGN Photography sample — stage candid" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
+              <div style="position:relative;aspect-ratio:4/3;border:1px solid var(--line);border-radius:10px;overflow:hidden"><img src="images/K-Htet_Photography/K13.jpg" alt="K Htet-YGN Photography sample — graduate portrait" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
             </div>
             <div class="fee-box"><p class="fee-label">💳 Package Price</p><p class="fee-value">USD 410</p></div>
             <div class="fact-list">
@@ -799,6 +827,8 @@ No. 82, Sin Phyu Shin Avenue, Pyay Road, 6½ Mile, Ward 11, Hlaing Township,, Ya
                 <li>Video Editing</li>
                 <li>Production Crews</li>
                 <li>Final edited videos will be delivered according to the agreed schedule. </li>
+                <li>Short Video (Estimated 4 to 5 mins)</li>
+                <li>Overall Event Moments</li>
               </ul>
             </div>
             <a class="fb-btn" href="https://www.facebook.com/profile.php?id=100068713197171" target="_blank" rel="noopener">📘 View Facebook Page</a>
@@ -884,8 +914,13 @@ No. 82, Sin Phyu Shin Avenue, Pyay Road, 6½ Mile, Ward 11, Hlaing Township,, Ya
         </article>
 
         <article class="card">
-          <div class="booth-cover">
-            <img src="images/Photo_Booth/P3.jpg" alt="360 degree photo booth with spinning platform" loading="lazy">
+          <div class="booth-cover booth-video-cover">
+            
+                <video controls preload="metadata" aria-label="360° Photo Booth video">
+                  <source src="videos/360.mp4" type="video/mp4">
+                  Your browser does not support HTML5 video.
+                </video>
+            
             <div class="shade"></div>
             <div class="cover-row"><h3>360° Photo Booth</h3><span class="price-pill"><span class="cur">💳</span> USD 200</span></div>
           </div>
@@ -903,6 +938,8 @@ No. 82, Sin Phyu Shin Avenue, Pyay Road, 6½ Mile, Ward 11, Hlaing Township,, Ya
                 <li> Instant video download</li>
                 <li> All soft copies within 3 days after event</li>
                 <li>Seperator pole</li>
+              </ul>
+            </div>
           </div>
         </article>
       </div>
